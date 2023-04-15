@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- ajax request -->
+<form>
+    <input type="text">
+    <input type="text">
+    <input type="submit" value="login">
+</form>
+<script src="../jquery/jquery-3.2.1.min.js"></script>
+<script>
+    $('input[type="submit"]').on('click',(e)=>{
+        // console. log('xxx');
+        // How to cancel the default submit function of the form form
+        e.preventDefault();
+        $.ajax({
+            method: 'post',
+            url:'http://localhost:3000/index2',
+            data:{
+                name:$('input[type="text"]').eq(0).val(),
+                password:$('input[type="text"]').eq(1).val()
+            },
+            success:(data)=>{
+                console. log(data);
+            },
+            error:(err)=>{
+                console. log(err);
+            }
+        })
+    })
+</script>
+</body>
+</html>

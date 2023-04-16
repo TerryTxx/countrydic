@@ -1,0 +1,11 @@
+{
+  "name": "countryonline",
+  "version": "1.0.0",
+  "engines": {
+    "node": "x.x.x"
+  },
+  "scripts": {
+    "start": "node leans-express/app.js",
+    "build": "cd countrydic/country && npm install && npm run build"
+  }
+}

@@ -15,10 +15,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "react-scripts build && custom-build-script",
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "heroku-postbuild": "cd ../ && npm install --prefix ./leans-express && npm run build --prefix ./country",
     "dev": "concurrently \"cd ../leans-express && npm run dev\" \"npm start\""
   },
   "eslintConfig": {

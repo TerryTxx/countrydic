@@ -78,3 +78,5 @@ FAIL  src/App.test.js
     Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
 ```
 #### (BONUS): Deployment / hosting of application (e.g Heroku)
+- completed;
+https://countryline.herokuapp.com/
